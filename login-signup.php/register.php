@@ -21,7 +21,7 @@ session_start();
 
 <body>
     <br><br><br><br><br>
-    <div class="container col-6">
+    <div class="container col-4">
         <h1 class="title">Register</h1>
         <form action="" method="POST">
             <div class="input-group mb-3">
@@ -90,7 +90,7 @@ $Confirmpassword=mysqli_real_escape_string($con,$_POST['confirmpassword']);
 $pass=password_hash($Password,PASSWORD_BCRYPT);
 $check=password_hash($Confirmpassword,PASSWORD_BCRYPT);
 
-$emailquery="select * from registeration where Email='$Email'";
+$emailquery="select * from registration where Email='$Email'";
 $query=mysqli_query($con,$emailquery);
 $email_count=mysqli_num_rows($query);
 
@@ -106,7 +106,7 @@ else
 {
     if($Password===$Confirmpassword)
     {
-        $insertquery="INSERT INTO `registeration`( `Name`, `Email`, `Mobnumber`, `Password`, `Confirmpassword`) VALUES ('$Name','$Email','$Mobnumber','$pass','$check') ";
+        $insertquery="INSERT INTO `registration`( `Name`, `Email`, `Mobnumber`, `Password`, `Confirmpassword`) VALUES ('$Name','$Email','$Mobnumber','$pass','$check') ";
         $iquery=mysqli_query($con,$insertquery);
         if($iquery)
         {
