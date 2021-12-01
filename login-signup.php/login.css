@@ -1,0 +1,32 @@
+*{
+    background-color: var(--primary-color);
+}
+.title{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+@media(max-width:800px){
+    *{
+        padding: 3px;
+        margin: 3px;
+    }
+    .container{
+        width: 100%;
+    }
+}
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+.dark-theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+#icon{
+    float: right;
+}
+#person{
+    height:3rem;
+    width:3rem;
+}

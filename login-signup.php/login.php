@@ -17,21 +17,24 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image:url('Screenshot (82).png');background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;padding-bottom: 9rem;">
 
-   <br><br>
-    <div class="container col-4" id="loginform">
-        <h1 class="title">Login</h1>
+    <br><br><br><br><br><br>
+    <div class="container col-3" id="loginform">
+        <div>
+            <img src="Screenshot (79).png" alt="" id="person">
+        </div>
+        <h1 class="title" style="font-family: 'Secular One', sans-serif; ">Login</h1>
         <form action="" method="POST">
-            <button type="button" class="btn btn-danger" style="width:100%;"><img src="gmail.png" href="image"
-                    style="height:1.5rem;width:1.5rem;">Login via Gmail</button>
-            <br><br>
-            <button type="button" class="btn btn-primary" style="width:100%;"><img src="facebook.png" href="image"
-                    style="height:1.5rem;width:1.5rem;"> Login via Facebook</button>
-            <br><br>
-            <pre style="font-size: 1.5rem;">                OR</pre>
+
             <br>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -40,7 +43,8 @@ session_start();
                             d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                     </svg></span>
                 <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                    aria-describedby="basic-addon1" name="email" value="<?php if(isset($_COOKIE['emailcookie'])){ echo $_COOKIE['emailcookie'];}?>">
+                    aria-describedby="basic-addon1" name="email"
+                    value="<?php if(isset($_COOKIE['emailcookie'])){ echo $_COOKIE['emailcookie'];}?>">
             </div>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -49,9 +53,11 @@ session_start();
                             d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                     </svg></span>
                 <input type="password" class="form-control" placeholder="Password" aria-label="Username"
-                    aria-describedby="passwordHelpBlock" name="password" value="<?php if(isset($_COOKIE['passwordcookie'])){ echo $_COOKIE['passwordcookie'];}?>">
+                    aria-describedby="passwordHelpBlock" name="password"
+                    value="<?php if(isset($_COOKIE['passwordcookie'])){ echo $_COOKIE['passwordcookie'];}?>">
             </div>
-            <button type="submit" class="btn btn-primary" name="submit">Login</button>
+            <button style="border-radius:2rem;background-color: #36096d;
+background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);width:5rem;" name="submit">Login</button>
             <br><br>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="rememberMe">
@@ -64,6 +70,7 @@ session_start();
     <?php
 
 include "dbcon.php";
+
 
 if(isset($_POST['submit']))
 {
@@ -87,30 +94,30 @@ if(isset($_POST['submit']))
                 setcookie('emailcookie',$Email,time()+86400);
                 setcookie('passwordcookie',$Password,time()+86400);
                 ?>
-                <script>
-                alert("Login Successful! Redirecting...");
-                </script>
-                <?php
+    <script>
+    alert("Login Successful! Redirecting...");
+    </script>
+    <?php
                 header(location:"home.php");
             }
             else
             {
                 ?>
-                <script>
-                alert("Login Successful! Redirecting...");
-                location.replace("home.php");
-                </script>
-                <?php
+    <script>
+    alert("Login Successful! Redirecting...");
+    location.replace("home.php");
+    </script>
+    <?php
             }
             
         }
         else
         {
             ?>
-            <script>
-            alert("Incorrect Password");
-            </script>
-            <?php
+    <script>
+    alert("Incorrect Password");
+    </script>
+    <?php
         }
     }
     else

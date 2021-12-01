@@ -16,17 +16,31 @@ session_start();
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+    <link href="register.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 </head>
 
-<body>
+
+<body style="background-image:url('Screenshot (82).png');background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;padding-bottom: 10rem;">
+
+
     <br><br><br><br><br>
-    <div class="container col-4">
-        <h1 class="title">Register</h1>
-        <form action="" method="POST">
-            <div class="input-group mb-3">
+
+    <div class="container col-3 card" style="border: 2px solid black;border-radius: 2rem;padding:2rem;">
+
+        <div style="">
+            <img src="Screenshot (79).png" alt="" id="person">
+            <h1 class="title" style="font-family: 'Secular One', sans-serif; ">Register</h1>
+        </div>
+        <form action="" method="POST" class="input-group mb-3">
+            <div class="input-group mb-3" style="">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                        height="16" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                        height="16" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16"
+                        style="background-color: rgba(245, 245, 245, 0.233);">
                         <path
                             d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
                         <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -34,7 +48,7 @@ session_start();
                 <input type="text" class="form-control" placeholder="Full Name" aria-label="Username"
                     aria-describedby="basic-addon1" name="username">
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" style="">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                         height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                         <path
@@ -43,7 +57,7 @@ session_start();
                 <input type="text" class="form-control" placeholder="Email" aria-label="Username"
                     aria-describedby="basic-addon1" name="email">
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" style="">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                         height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                         <path
@@ -52,7 +66,7 @@ session_start();
                 <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
                     aria-describedby="basic-addon1" name="mobile">
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" style="">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                         height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                         <path
@@ -61,7 +75,7 @@ session_start();
                 <input type="password" class="form-control" placeholder="Password" aria-label="Username"
                     aria-describedby="passwordHelpBlock" name="password">
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group mb-3" style="">
                 <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                         height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
                         <path
@@ -72,10 +86,15 @@ session_start();
                 <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username"
                     aria-describedby="basic-addon1" name="confirmpassword">
             </div>
-            <button type="submit" class="btn btn-primary" name="submit">Create Account</button>
-            <br><br>
-            <h5 style="text-align: center;">Already Registered?<a href="login.php">Login</a></h5>
+            <button
+                style="border-radius:2rem;background-color: #36096d;
+background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);width:6rem;"
+                name="submit">Register</button>
+
+            <!-- <button type="submit" class="btn btn-primary" name="submit">Create Account</button> -->
+            
         </form>
+        <h5 style="text-align: center;">Already Registered?<a href="login.php">Login</a></h5>
     </div>
     <?php
 include "dbcon.php";
@@ -135,6 +154,7 @@ else
 
 }
 ?>
+    <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
