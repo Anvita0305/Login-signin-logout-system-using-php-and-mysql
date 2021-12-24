@@ -3,10 +3,7 @@
 .title{
     text-align: center;
     padding-bottom: 1rem;
-    font-family: 'Secular One', sans-serif;
-
 }
-
 @media(max-width:800px){
     *{
         padding: 3px;
@@ -23,4 +20,11 @@
 #person{
     height:3rem;
     width:3rem;
+}
+.btn1{
+    background-color: hsl(206, 21%, 94%);
+}
+.dec{
+    text-decoration: none;
+    position: relative;
 }

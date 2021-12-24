@@ -16,21 +16,26 @@ session_start();
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
     <link href="register.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
 </head>
 
 
-<body style="background-image:url('Screenshot (82).png');background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;padding-bottom: 10rem;">
+<body style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,40,121,1) 68%, rgba(0,212,255,1) 100%);">
 
 
-    <br><br><br><br><br>
-
-    <div class="container col-3 card" style="border: 2px solid black;border-radius: 2rem;padding:2rem;">
+    <br><br>
+    <h1 class="title" style="color:white;">Create a free Account on QUIZAPP</h1>
+    <h1 class="title" style="color:white;font-family: 'Vujahday Script', cursive;">One Life. Go Achieve!</h1>
+    <div class="container col-5 card" style="background-color:rgba(255, 255, 255, 0.342)">
 
         <div style="">
             <img src="Screenshot (79).png" alt="" id="person">
@@ -86,15 +91,12 @@ session_start();
                 <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username"
                     aria-describedby="basic-addon1" name="confirmpassword">
             </div>
-            <button
-                style="border-radius:2rem;background-color: #36096d;
-background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);width:6rem;"
-                name="submit">Register</button>
+            <button class="btn1" name="submit" style="width:6rem;height:2.5rem;border-radius: 0.5rem;"><a
+                    href="login.php" class="dec" style=" color: black;font: size 1rem;">Register</a></button>
 
-            <!-- <button type="submit" class="btn btn-primary" name="submit">Create Account</button> -->
-            
+
         </form>
-        <h5 style="text-align: center;">Already Registered?<a href="login.php">Login</a></h5>
+        <h5 style="text-align: center;">Already Registered?<a href="login.php" style="color:white;">Login</a></h5>
     </div>
     <?php
 include "dbcon.php";

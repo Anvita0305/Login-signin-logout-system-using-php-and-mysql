@@ -3,7 +3,7 @@
 $username="root";
 $password="";
 $server="localhost";
-$db="signin";
+$db="ppl mini project";
 
 $con=mysqli_connect($server,$username,$password,$db);
 
